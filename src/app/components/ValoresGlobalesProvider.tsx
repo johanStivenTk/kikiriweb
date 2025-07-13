@@ -2,15 +2,14 @@
 
 import {createContext, useContext, useState} from "react";
 
-const valoresPermitidos = ["Boe", "Animals", "contacto"] as const;
-type ValorVisual = typeof valoresPermitidos[number];
+export type ValorVisual = "Boe" | "Animals" | "contacto";
 
 type ContextType = {
     valueVisual: ValorVisual;
     setValueVisual: (v: ValorVisual) => void;
 };
 
-const linksPlayStore = ["https://play.google.com/store/apps/details?id=com.YccGames.Animalstotherescue&hl=en", "https://play.google.com/store/apps/details?id=com.yccgames.blazeofempires&hl=en"]
+//const linksPlayStore = ["https://play.google.com/store/apps/details?id=com.YccGames.Animalstotherescue&hl=en", "https://play.google.com/store/apps/details?id=com.yccgames.blazeofempires&hl=en"]
 export const boeImagen = ["/images/boe/2.png", "/images/boe/3.png"]
 export const kidsImagen = ["/images/animals/1.png", "/images/animals/2.png",];
 

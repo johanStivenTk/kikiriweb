@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
 import {motion} from "framer-motion";
-import {useValoresGlobales} from "@/app/components/ValoresGlobalesProvider";
-import {useState} from "react";
-
-
+import {useValoresGlobales, ValorVisual} from "@/app/components/ValoresGlobalesProvider";
+import Image from "next/image";
 const FooterHeader = () => {
   const {valueVisual, setValueVisual} = useValoresGlobales();
 
@@ -17,11 +15,14 @@ const FooterHeader = () => {
   return (
     <div className="w-full h-[20vh] flex items-center justify-center bg-[#0b1012]">
       <div className="w-full h-full grid grid-cols-[15%_85%] items-end justify-center overflow-hidden ">
-        <div className="flex items-center justify-end w-full h-full bg-white border-r-4 border-t-4 border-b-4 rounded-tr-4xl rounded-br-4xl border-gray-700 overflow-hidden">
-          <img
-            src="/KikiriLogo.png"
-            alt="Kikiri Logo"
-            className="w- h-full object-contain "
+        <div
+            className="flex items-center justify-end w-full h-full bg-white border-r-4 border-t-4 border-b-4 rounded-tr-4xl rounded-br-4xl border-gray-700 overflow-hidden relative">
+          <Image
+              src="/KikiriLogo.png"
+              alt="Kikiri Logo"
+              fill
+              className="object-contain"
+              priority
           />
         </div>
         {/* tabs */}
@@ -35,7 +36,7 @@ const FooterHeader = () => {
                 <div
                     key={tab.key}
                     role="button"
-                    onClick={() => setValueVisual(tab.key as any)}
+                    onClick={() => setValueVisual(tab.key as ValorVisual)}
                     className={`relative flex-1 h-full flex items-center justify-center cursor-pointer transition-all duration-300   ${
                         isSelected ? "scale-100 z-10" : ""
                     } ${isLast ? " " : "  "} `}
