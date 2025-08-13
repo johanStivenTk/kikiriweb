@@ -10,8 +10,8 @@ type ContextType = {
 };
 
 //const linksPlayStore = ["https://play.google.com/store/apps/details?id=com.YccGames.Animalstotherescue&hl=en", "https://play.google.com/store/apps/details?id=com.yccgames.blazeofempires&hl=en"]
-export const boeImagen = ["/images/boe/2.png", "/images/boe/3.png"]
-export const kidsImagen = ["/images/animals/1.png", "/images/animals/2.png",];
+export const boeImagen = ["/images/boe/1.png", "/images/boe/2.png", "/images/boe/3.png" , "/images/boe/4.png" , "/images/boe/5.png"]
+export const kidsImagen = ["/images/animals/1.png", "/images/animals/2.png", "/images/animals/3.png", "/images/animals/4.png", "/images/animals/5.png", "/images/animals/6.png", "/images/animals/7.png", "/images/animals/8.png", "/images/animals/9.png"];
 
 const ValoresGlobalesContext = createContext<ContextType | null>(null);
 
